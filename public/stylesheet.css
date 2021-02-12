@@ -1,0 +1,56 @@
+
+.top-wrapper{
+    text-align:center;
+    font-size:30px;
+    padding-left:30px;
+}
+
+
+.container{
+    margin:0 auto;
+    width:1160px
+}
+
+.inf-wrapper{
+    text-align:center;
+}
+
+ul{
+    list-style:none;
+}
+
+.btn-wrapper{
+    margin-top:100px;
+    float:right;
+    margin-right:25%;
+    
+}
+
+.reservation{
+    color:white;
+    background-color:rgba(255, 99, 71,0.5);
+    transition:all 0.3s;
+    
+}
+.reservation:hover{
+    background-color:#ff6347;
+}
+
+.btn{
+    padding:20px 40px;
+    border-radius:20px;
+    border-bottom:none;
+    text-decoration:none;
+    
+}
+
+.stop{
+    background-color:rgba(169,169,169,0.5);
+    color:white;
+    transition:all 0.3s;
+}
+
+.stop:hover{
+    background-color:darkgrey;
+
+}

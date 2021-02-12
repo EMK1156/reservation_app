@@ -3,6 +3,15 @@ const mysql = require('mysql2');
 
 const app = express();
 
+app.set("view engine", "ejs");
+// staticメソッドを利用し、指定ディレクトリ以下の静的ファイルを読み込む
+app.use("/public", express.static(__dirname + "/public"));
+
+// routeの設定
+app.use("/top", require("./routes/top.js"));
+// app.use("/reserve/date", require("./routes/index.js"));
+app.use("/reserve/contents", require("./routes/reservationContents.js"));
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -23,7 +32,7 @@ app.get('/', (req, res) => {
     'SELECT * FROM user',
     (error, results) => {
       console.log(results);
-      res.render('hello.ejs');
+      res.render('index.ejs');
     }
   );
 });
